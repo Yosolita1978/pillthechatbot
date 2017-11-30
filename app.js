@@ -133,6 +133,7 @@ function receivedMessage(event) {
 	if (!sessionIds.has(senderID)) {
 		sessionIds.set(senderID, uuid.v1());
 	}
+	// This is the message that we receive from Facebook. 
 	console.log("Received message for user %d and page %d at %d with message:", senderID, recipientID, timeOfMessage);
 	console.log(JSON.stringify(message));
 
