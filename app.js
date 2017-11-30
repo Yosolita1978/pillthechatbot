@@ -295,7 +295,7 @@ function handleApiAiResponse(sender, response) {
 	let contexts = response.result.contexts;
 	let parameters = response.result.parameters;
 
-	console.log("reponseText " + response);
+	console.log("reponseText " + response.result);
 	sendTypingOff(sender);
 
 	if (isDefined(messages) && (messages.length == 1 && messages[0].type != 0 || messages.length > 1)) {
