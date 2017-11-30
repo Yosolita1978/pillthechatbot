@@ -134,8 +134,8 @@ function receivedMessage(event) {
 		sessionIds.set(senderID, uuid.v1());
 	}
 	// This is the message that we receive from Facebook. 
-	console.log("Received message for user %d and page %d at %d with message:", senderID, recipientID, timeOfMessage);
-	console.log(JSON.stringify(message));
+	//console.log("Received message for user %d and page %d at %d with message:", senderID, recipientID, timeOfMessage);
+	//console.log(JSON.stringify(message));
 
 	var isEcho = message.is_echo;
 	var messageId = message.mid;
@@ -294,6 +294,10 @@ function handleApiAiResponse(sender, response) {
 	let action = response.result.action;
 	let contexts = response.result.contexts;
 	let parameters = response.result.parameters;
+
+	console.log(responseText);
+	console.log(responseData);
+	console.log(messages, action, contexts, parameters);
 
 	sendTypingOff(sender);
 
