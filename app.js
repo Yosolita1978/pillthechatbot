@@ -185,7 +185,7 @@ function handleEcho(messageId, appId, metadata) {
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	switch (action) {
-		case "greetings-custom":
+		case "input.welcome":
 			let replies = [
 			    {
 			        "content_type":"text",
