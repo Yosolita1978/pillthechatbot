@@ -204,6 +204,8 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 			        "payload":"Nothing"
 			    } 
 		    ];
+		    sendQuickReply(sender, responseText, replies);
+			break;
 
 		case "pill-set":
 			replies = [
@@ -230,7 +232,7 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 		    ];
 		    sendQuickReply(sender, responseText, replies);
 			break;
-			
+
 		default:
 			//unhandled action, just send back the text
 			sendTextMessage(sender, responseText);
