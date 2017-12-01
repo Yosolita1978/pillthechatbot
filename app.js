@@ -190,7 +190,7 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 			    {
 			        "content_type":"text",
 			        "title":"Save a new Pill",
-			        "payload":"Save"
+			        "payload":"Save a new pill"
 			    },
 			    {
 			        "content_type":"text",
@@ -202,6 +202,31 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 			        "title":"Nothing, thanks",
 			        "payload":"Nothing"
 			    } 
+		    ];
+		    sendQuickReply(sender, responseText, replies);
+			break;
+		case "pill-set":
+			let replies = [
+			    {
+			        "content_type":"text",
+			        "title":"Name Medication",
+			        "payload":"name medication"
+			    },
+			    {
+			        "content_type":"text",
+			        "title":"Dosis",
+			        "payload":"dosis medication"
+			    },
+			    {
+			        "content_type":"text",
+			        "title":"Time",
+			        "payload":"time medication"
+			    },
+			    {
+			        "content_type":"text",
+			        "title":"Recurrence",
+			        "payload":"recurrence medication"
+			    }  
 		    ];
 		    sendQuickReply(sender, responseText, replies);
 			break;
