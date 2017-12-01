@@ -203,30 +203,29 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 			        "payload":"Nothing"
 			    } 
 		    ];
-		    sendQuickReply(sender, responseText, replies);
-			break;
+
 		case "pill-set":
 			let replies = [
 			    {
 			        "content_type":"text",
-			        "title":"Name Medication",
-			        "payload":"name medication"
+			        "title":"Name",
+			        "payload":"name pill"
 			    },
 			    {
 			        "content_type":"text",
 			        "title":"Dosis",
-			        "payload":"dosis medication"
+			        "payload":"dosis pill"
 			    },
 			    {
 			        "content_type":"text",
 			        "title":"Time",
-			        "payload":"time medication"
+			        "payload":"time pill"
 			    },
 			    {
 			        "content_type":"text",
 			        "title":"Recurrence",
-			        "payload":"recurrence medication"
-			    }  
+			        "payload":"recurrence pill"
+			    }
 		    ];
 		    sendQuickReply(sender, responseText, replies);
 			break;
