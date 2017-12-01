@@ -184,6 +184,7 @@ function handleEcho(messageId, appId, metadata) {
 }
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
+	let replies;
 	switch (action) {
 		case "input.welcome":
 			replies = [
@@ -229,6 +230,7 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 		    ];
 		    sendQuickReply(sender, responseText, replies);
 			break;
+			
 		default:
 			//unhandled action, just send back the text
 			sendTextMessage(sender, responseText);
