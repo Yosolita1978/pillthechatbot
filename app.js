@@ -205,6 +205,7 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 			    } 
 		    ];
 		    sendQuickReply(sender, responseText, replies);
+		    console.log("switch welcome");
 			break;
 
 		case "pill-set":
@@ -231,11 +232,13 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 			    }
 		    ];
 		    sendQuickReply(sender, responseText, replies);
+		    console.log("switch pill-set");
 			break;
 
 		default:
 			//unhandled action, just send back the text
 			sendTextMessage(sender, responseText);
+			console.log("switch default");
 	}
 }
 
