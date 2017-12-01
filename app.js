@@ -184,6 +184,7 @@ function handleEcho(messageId, appId, metadata) {
 }
 
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
+	console.log("Calling handleApiAiAction " + action);
 	let replies;
 	switch (action) {
 		case "input.welcome":
