@@ -186,7 +186,7 @@ function handleEcho(messageId, appId, metadata) {
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 	switch (action) {
 		case "input.welcome":
-			let replies = [
+			replies = [
 			    {
 			        "content_type":"text",
 			        "title":"Save a new Pill",
@@ -205,7 +205,7 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 		    ];
 
 		case "pill-set":
-			let replies = [
+			replies = [
 			    {
 			        "content_type":"text",
 			        "title":"Name",
